@@ -1,23 +1,19 @@
-<!DOCTYPE html>
+><!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="theme-color" content="#0B1420">
-
 <title>Thursday Night Padel Club</title>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-
 <style>
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
-
 html, body {
   margin: 0;
   padding: 0;
@@ -26,34 +22,26 @@ html, body {
   color: #EDF1F7;
   font-family: 'Inter', sans-serif;
 }
-
 body {
   padding-bottom: 90px;
 }
-
 button, input, select {
   font-family: inherit;
 }
-
 button {
   cursor: pointer;
 }
-
 .font-display {
   font-family: 'Bebas Neue', sans-serif;
   letter-spacing: 0.02em;
 }
-
 .font-mono {
   font-family: 'JetBrains Mono', monospace;
 }
-
 #app {
   min-height: 100vh;
 }
-
 /* HEADER */
-
 .header {
   position: relative;
   overflow: hidden;
@@ -61,7 +49,6 @@ button {
   background: radial-gradient(circle at 50% 120%, rgba(232,56,79,0.14), transparent 60%);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
-
 .header-kicker {
   color: #E8384F;
   font-size: 12px;
@@ -70,7 +57,6 @@ button {
   text-transform: uppercase;
   margin-bottom: 4px;
 }
-
 .header h1 {
   margin: 0;
   font-family: 'Bebas Neue', sans-serif;
@@ -78,7 +64,6 @@ button {
   line-height: 0.95;
   font-weight: 400;
 }
-
 .header-meta {
   display: flex;
   gap: 12px;
@@ -87,22 +72,17 @@ button {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
 }
-
 /* MAIN */
-
 .main {
   width: 100%;
   max-width: 520px;
   margin: 0 auto;
   padding: 16px;
 }
-
 .section {
   margin-bottom: 16px;
 }
-
 /* TABS */
-
 .tab-bar {
   position: fixed;
   z-index: 100;
@@ -113,13 +93,11 @@ button {
   border-top: 1px solid rgba(255,255,255,0.08);
   padding-bottom: env(safe-area-inset-bottom);
 }
-
 .tab-inner {
   max-width: 520px;
   margin: 0 auto;
   display: flex;
 }
-
 .tab-button {
   flex: 1;
   border: 0;
@@ -131,42 +109,33 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
-
 .tab-button.active {
   color: #E8384F;
 }
-
 .tab-icon {
   display: block;
   font-size: 20px;
   margin-bottom: 3px;
 }
-
 /* CARDS */
-
 .card {
   background: #16233A;
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 12px;
 }
-
 .card-padding {
   padding: 12px;
 }
-
 /* WEEK SELECT / FILTERS */
-
 .filter-card {
   padding: 12px;
   margin-bottom: 12px;
 }
-
 .filter-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
 }
-
 .filter-label {
   color: #7C93B5;
   font-family: 'JetBrains Mono', monospace;
@@ -175,7 +144,6 @@ button {
   letter-spacing: 0.12em;
   margin-bottom: 5px;
 }
-
 .filter-select {
   width: 100%;
   border: 1px solid rgba(255,255,255,0.08);
@@ -186,13 +154,10 @@ button {
   font-size: 12px;
   outline: none;
 }
-
 .filter-select:focus {
   border-color: #E8384F;
 }
-
 /* LEAGUE TABLE */
-
 .table-header {
   display: flex;
   justify-content: space-between;
@@ -204,19 +169,16 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
-
 .table-header-right {
   display: flex;
   gap: 16px;
   padding-right: 26px;
 }
-
 .team-row {
   overflow: hidden;
   margin-bottom: 8px;
   position: relative;
 }
-
 .team-row.qualifying::before {
   content: "";
   position: absolute;
@@ -226,7 +188,6 @@ button {
   width: 3px;
   background: #3EBD7D;
 }
-
 .team-main {
   width: 100%;
   border: 0;
@@ -238,7 +199,6 @@ button {
   padding: 12px;
   text-align: left;
 }
-
 .rank {
   width: 28px;
   height: 28px;
@@ -251,12 +211,10 @@ button {
   font-size: 12px;
   font-weight: 700;
 }
-
 .team-info {
   flex: 1;
   min-width: 0;
 }
-
 .team-name {
   font-size: 14px;
   font-weight: 600;
@@ -264,14 +222,12 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .team-record {
   color: #7C93B5;
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
   margin-top: 4px;
 }
-
 .points {
   width: 34px;
   text-align: center;
@@ -280,7 +236,6 @@ button {
   font-size: 27px;
   line-height: 1;
 }
-
 .gd-value {
   width: 44px;
   text-align: center;
@@ -289,23 +244,19 @@ button {
   font-size: 12px;
   font-weight: 700;
 }
-
 .chevron {
   color: #7C93B5;
   transition: transform 0.15s;
 }
-
 .chevron.open {
   transform: rotate(180deg);
 }
-
 .team-stats {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 4px;
   padding: 0 12px 12px;
 }
-
 .stat-cell {
   background: rgba(255,255,255,0.03);
   border-radius: 8px;
@@ -314,17 +265,14 @@ button {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
 }
-
 .stat-label {
   color: #7C93B5;
   font-size: 9px;
 }
-
 .stat-value {
   font-weight: 700;
   margin-top: 3px;
 }
-
 .table-note {
   text-align: center;
   color: #7C93B5;
@@ -333,7 +281,6 @@ button {
   margin: 10px 0 4px;
   line-height: 1.6;
 }
-
 .legend-row {
   display: flex;
   align-items: center;
@@ -344,33 +291,27 @@ button {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
 }
-
 .legend-dot {
   width: 8px;
   height: 8px;
   border-radius: 2px;
   background: #3EBD7D;
 }
-
 /* FIXTURES */
-
 .week-heading {
   display: flex;
   align-items: center;
   gap: 8px;
   margin: 18px 0 8px;
 }
-
 .week-heading:first-child {
   margin-top: 0;
 }
-
 .week-title {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
   letter-spacing: 0.03em;
 }
-
 .week-pill {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
@@ -378,7 +319,6 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-
 .round-label {
   color: #7C93B5;
   font-family: 'JetBrains Mono', monospace;
@@ -387,36 +327,30 @@ button {
   letter-spacing: 0.12em;
   margin: 10px 0 6px;
 }
-
 .fixture-row {
   display: flex;
   align-items: center;
   padding: 10px 12px;
   margin-bottom: 6px;
 }
-
 .fixture-court {
   width: 20px;
   color: #7C93B5;
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
 }
-
 .fixture-team {
   flex: 1;
   font-size: 12px;
   font-weight: 500;
 }
-
 .fixture-team.right {
   text-align: right;
 }
-
 .fixture-team.winner {
   color: #3EBD7D;
   font-weight: 700;
 }
-
 .fixture-score {
   padding: 0 10px;
   font-family: 'Bebas Neue', sans-serif;
@@ -425,15 +359,12 @@ button {
   text-align: center;
   color: #EDF1F7;
 }
-
 .fixture-score.pending {
   color: #7C93B5;
   font-size: 12px;
   font-family: 'JetBrains Mono', monospace;
 }
-
 /* MANAGE */
-
 .lock-button {
   width: 38px;
   height: 38px;
@@ -443,11 +374,9 @@ button {
   background: #101B2C;
   color: #7C93B5;
 }
-
 .field {
   margin-bottom: 16px;
 }
-
 .field-label {
   color: #7C93B5;
   font-family: 'JetBrains Mono', monospace;
@@ -456,7 +385,6 @@ button {
   letter-spacing: 0.15em;
   margin-bottom: 5px;
 }
-
 .input, .select {
   width: 100%;
   border: 1px solid rgba(255,255,255,0.08);
@@ -467,20 +395,16 @@ button {
   font-size: 14px;
   outline: none;
 }
-
 .input:focus, .select:focus {
   border-color: #E8384F;
 }
-
 input[type="number"] {
   text-align: center;
 }
-
 .manage-fixture {
   padding: 12px;
   margin-bottom: 8px;
 }
-
 .manage-fixture-top {
   display: flex;
   align-items: center;
@@ -492,19 +416,16 @@ input[type="number"] {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-
 .manage-score-row {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
 .manage-team-name {
   flex: 1;
   font-size: 12px;
   font-weight: 600;
 }
-
 .manage-score-input {
   width: 48px;
   border: 1px solid rgba(255,255,255,0.08);
@@ -517,15 +438,50 @@ input[type="number"] {
   text-align: center;
   outline: none;
 }
-
 .manage-vs {
   color: #7C93B5;
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
 }
-
+/* FIXTURE EDITING */
+.manage-fixture-editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+.manage-fixture-editor .field {
+  margin-bottom: 0;
+}
+.fixture-edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+.fixture-edit-actions button {
+  flex: 1;
+}
+.danger-button {
+  border: 0;
+  border-radius: 8px;
+  background: rgba(232,56,79,0.15);
+  color: #F19AA6;
+  padding: 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.manage-section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  margin: 20px 0 8px;
+}
+.manage-help {
+  color: #7C93B5;
+  font-size: 11px;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
 /* BUTTONS */
-
 .primary-button {
   width: 100%;
   border: 0;
@@ -536,7 +492,6 @@ input[type="number"] {
   font-size: 14px;
   font-weight: 700;
 }
-
 .secondary-button {
   border: 0;
   border-radius: 8px;
@@ -546,7 +501,6 @@ input[type="number"] {
   font-size: 12px;
   font-weight: 700;
 }
-
 .small-button {
   border: 0;
   border-radius: 8px;
@@ -556,14 +510,11 @@ input[type="number"] {
   font-size: 13px;
   font-weight: 700;
 }
-
 /* PASSCODE */
-
 .gate {
   text-align: center;
   padding: 40px 20px;
 }
-
 .gate-icon {
   width: 56px;
   height: 56px;
@@ -576,45 +527,37 @@ input[type="number"] {
   border: 1px solid rgba(255,255,255,0.08);
   font-size: 20px;
 }
-
 .gate h2 {
   margin: 0 0 5px;
   font-size: 17px;
 }
-
 .gate p {
   color: #7C93B5;
   font-size: 12px;
   margin: 0 auto 20px;
   max-width: 300px;
 }
-
 .gate-form {
   max-width: 260px;
   margin: auto;
 }
-
 .gate-form .input {
   text-align: center;
   margin-bottom: 8px;
   letter-spacing: 0.2em;
 }
-
 /* EMPTY / ERRORS */
-
 .empty {
   text-align: center;
   padding: 60px 15px;
   color: #7C93B5;
   font-size: 13px;
 }
-
 .empty-icon {
   font-size: 25px;
   opacity: 0.5;
   margin-bottom: 12px;
 }
-
 .error-box {
   margin-bottom: 12px;
   padding: 10px 12px;
@@ -624,7 +567,6 @@ input[type="number"] {
   color: #F19AA6;
   font-size: 12px;
 }
-
 .success-box {
   margin-bottom: 12px;
   padding: 10px 12px;
@@ -634,7 +576,6 @@ input[type="number"] {
   color: #8FE0AE;
   font-size: 12px;
 }
-
 .setup-screen {
   min-height: 100vh;
   display: flex;
@@ -643,7 +584,6 @@ input[type="number"] {
   padding: 30px;
   text-align: center;
 }
-
 .loading {
   min-height: 100vh;
   display: flex;
@@ -653,9 +593,7 @@ input[type="number"] {
   font-family: 'JetBrains Mono', monospace;
   font-size: 13px;
 }
-
 /* MOBILE */
-
 @media (max-width: 380px) {
   .header h1 { font-size: 35px; }
   .main { padding: 12px; }
@@ -663,69 +601,68 @@ input[type="number"] {
   .table-header-right { gap: 10px; padding-right: 25px; }
   .points { width: 30px; }
   .gd-value { width: 38px; }
+  .manage-fixture-editor {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
-
 <body>
-
 <div id="app">
   <div class="loading">Loading league…</div>
 </div>
-
 <script>
-
 /* ============================================================
    FIREBASE CONFIGURATION
-   Reusing the same Firebase project as the football dashboard,
-   nested under a separate "padel" root key so the two datasets
-   never collide. Point FIREBASE_URL at a different project
-   instead if you'd rather keep them fully separate.
    ============================================================ */
-
 const FIREBASE_URL =
   "https://tuesday-night-football-e56de-default-rtdb.europe-west1.firebasedatabase.app";
-
 const ROOT = "padel";
-
-
 /* ============================================================
    FIREBASE FUNCTIONS
    ============================================================ */
-
 async function firebaseGet(path, fallback) {
   try {
-    const response = await fetch(FIREBASE_URL + "/" + ROOT + "/" + path + ".json");
-    if (!response.ok) throw new Error("Firebase HTTP " + response.status);
+    const response = await fetch(
+      FIREBASE_URL + "/" + ROOT + "/" + path + ".json"
+    );
+    if (!response.ok) {
+      throw new Error("Firebase HTTP " + response.status);
+    }
     const data = await response.json();
-    if (data === null || data === undefined) return fallback;
+    if (data === null || data === undefined) {
+      return fallback;
+    }
     return data;
   } catch (error) {
     console.error("Firebase GET error:", error);
     throw error;
   }
 }
-
 async function firebaseSet(path, value) {
   try {
-    const response = await fetch(FIREBASE_URL + "/" + ROOT + "/" + path + ".json", {
-      method: "PUT",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(value)
-    });
-    if (!response.ok) throw new Error("Firebase HTTP " + response.status);
+    const response = await fetch(
+      FIREBASE_URL + "/" + ROOT + "/" + path + ".json",
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(value)
+      }
+    );
+    if (!response.ok) {
+      throw new Error("Firebase HTTP " + response.status);
+    }
     return true;
   } catch (error) {
     console.error("Firebase SET error:", error);
     throw error;
   }
 }
-
-
 /* ============================================================
    UTILITIES
    ============================================================ */
-
 function escapeHTML(value) {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -734,17 +671,13 @@ function escapeHTML(value) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
 }
-
 function formatGD(gd) {
   if (gd > 0) return "+" + gd;
   return String(gd);
 }
-
-
 /* ============================================================
-   TEAMS (fixed for the season)
+   TEAMS
    ============================================================ */
-
 const TEAMS = [
   { id: "kg", name: "Kurtis & Gianni" },
   { id: "er", name: "Ellis & Reece" },
@@ -755,23 +688,14 @@ const TEAMS = [
   { id: "lj", name: "Leon D & Joel" },
   { id: "lg", name: "Leon G & Grez" }
 ];
-
 function teamName(id) {
   const team = TEAMS.find(t => t.id === id);
   return team ? team.name : id;
 }
-
-
 /* ============================================================
-   FIXED SCHEDULE (from the official league fixtures graphic)
-   Each fixture: week, round, court, time, teamA, teamB.
-   Known results for weeks 1-2 are seeded into Firebase on
-   first load; everything else starts blank until entered
-   via Manage.
+   DEFAULT FIXTURE SCHEDULE
    ============================================================ */
-
-const SCHEDULE = [
-
+const DEFAULT_SCHEDULE = [
   // WEEK 1
   { id: "w1r1c1", week: 1, round: 1, court: 1, time: "7:30 PM", teamA: "ct", teamB: "tk" },
   { id: "w1r1c2", week: 1, round: 1, court: 2, time: "7:30 PM", teamA: "cb", teamB: "kg" },
@@ -781,7 +705,6 @@ const SCHEDULE = [
   { id: "w1r2c2", week: 1, round: 2, court: 2, time: "8:00 PM", teamA: "ct", teamB: "ks" },
   { id: "w1r2c3", week: 1, round: 2, court: 3, time: "8:00 PM", teamA: "cb", teamB: "lg" },
   { id: "w1r2c4", week: 1, round: 2, court: 4, time: "8:00 PM", teamA: "er", teamB: "lj" },
-
   // WEEK 2
   { id: "w2r1c1", week: 2, round: 1, court: 1, time: "7:30 PM", teamA: "cb", teamB: "tk" },
   { id: "w2r1c2", week: 2, round: 1, court: 2, time: "7:30 PM", teamA: "er", teamB: "ct" },
@@ -791,7 +714,6 @@ const SCHEDULE = [
   { id: "w2r2c2", week: 2, round: 2, court: 2, time: "8:00 PM", teamA: "kg", teamB: "lg" },
   { id: "w2r2c3", week: 2, round: 2, court: 3, time: "8:00 PM", teamA: "lj", teamB: "ct" },
   { id: "w2r2c4", week: 2, round: 2, court: 4, time: "8:00 PM", teamA: "cb", teamB: "er" },
-
   // WEEK 3
   { id: "w3r1c1", week: 3, round: 1, court: 1, time: "7:30 PM", teamA: "lg", teamB: "tk" },
   { id: "w3r1c2", week: 3, round: 1, court: 2, time: "7:30 PM", teamA: "ks", teamB: "lj" },
@@ -801,7 +723,6 @@ const SCHEDULE = [
   { id: "w3r2c2", week: 3, round: 2, court: 2, time: "8:00 PM", teamA: "lg", teamB: "er" },
   { id: "w3r2c3", week: 3, round: 2, court: 3, time: "8:00 PM", teamA: "ks", teamB: "cb" },
   { id: "w3r2c4", week: 3, round: 2, court: 4, time: "8:00 PM", teamA: "kg", teamB: "ct" },
-
   // WEEK 4
   { id: "w4r1c1", week: 4, round: 1, court: 1, time: "7:30 PM", teamA: "er", teamB: "tk" },
   { id: "w4r1c2", week: 4, round: 1, court: 2, time: "7:30 PM", teamA: "lj", teamB: "cb" },
@@ -811,7 +732,6 @@ const SCHEDULE = [
   { id: "w4r2c2", week: 4, round: 2, court: 2, time: "8:00 PM", teamA: "er", teamB: "lg" },
   { id: "w4r2c3", week: 4, round: 2, court: 3, time: "8:00 PM", teamA: "lj", teamB: "ks" },
   { id: "w4r2c4", week: 4, round: 2, court: 4, time: "8:00 PM", teamA: "ct", teamB: "kg" },
-
   // WEEK 5
   { id: "w5r1c1", week: 5, round: 1, court: 1, time: "7:30 PM", teamA: "ks", teamB: "cb" },
   { id: "w5r1c2", week: 5, round: 1, court: 2, time: "7:30 PM", teamA: "lg", teamB: "kg" },
@@ -821,7 +741,6 @@ const SCHEDULE = [
   { id: "w5r2c2", week: 5, round: 2, court: 2, time: "8:00 PM", teamA: "ks", teamB: "kg" },
   { id: "w5r2c3", week: 5, round: 2, court: 3, time: "8:00 PM", teamA: "lj", teamB: "ct" },
   { id: "w5r2c4", week: 5, round: 2, court: 4, time: "8:00 PM", teamA: "tk", teamB: "er" },
-
   // WEEK 6
   { id: "w6r1c1", week: 6, round: 1, court: 1, time: "7:30 PM", teamA: "lj", teamB: "tk" },
   { id: "w6r1c2", week: 6, round: 1, court: 2, time: "7:30 PM", teamA: "lg", teamB: "er" },
@@ -831,7 +750,6 @@ const SCHEDULE = [
   { id: "w6r2c2", week: 6, round: 2, court: 2, time: "8:00 PM", teamA: "lj", teamB: "er" },
   { id: "w6r2c3", week: 6, round: 2, court: 3, time: "8:00 PM", teamA: "cb", teamB: "ct" },
   { id: "w6r2c4", week: 6, round: 2, court: 4, time: "8:00 PM", teamA: "kg", teamB: "ks" },
-
   // WEEK 7
   { id: "w7r1c1", week: 7, round: 1, court: 1, time: "7:30 PM", teamA: "ct", teamB: "tk" },
   { id: "w7r1c2", week: 7, round: 1, court: 2, time: "7:30 PM", teamA: "cb", teamB: "kg" },
@@ -841,188 +759,211 @@ const SCHEDULE = [
   { id: "w7r2c2", week: 7, round: 2, court: 2, time: "8:00 PM", teamA: "ct", teamB: "ks" },
   { id: "w7r2c3", week: 7, round: 2, court: 3, time: "8:00 PM", teamA: "cb", teamB: "lg" },
   { id: "w7r2c4", week: 7, round: 2, court: 4, time: "8:00 PM", teamA: "er", teamB: "lj" }
-
 ];
-
-// Known results for weeks 1-2, seeded into Firebase the first
-// time the dashboard loads with no results stored yet.
+// Live schedule. This is replaced with the Firebase version
+// when the app loads.
+let SCHEDULE = DEFAULT_SCHEDULE.map(f => ({ ...f }));
+/* ============================================================
+   SEEDED RESULTS
+   ============================================================ */
 const SEED_RESULTS = {
-  w1r1c1: [4, 6], w1r1c2: [6, 5], w1r1c3: [6, 3], w1r1c4: [6, 1],
-  w1r2c1: [6, 4], w1r2c2: [6, 4], w1r2c3: [6, 0], w1r2c4: [6, 1],
-  w2r1c1: [5, 6], w2r1c2: [5, 6], w2r1c3: [0, 6], w2r1c4: [2, 6],
-  w2r2c1: [6, 2], w2r2c2: [6, 1], w2r2c3: [6, 2], w2r2c4: [3, 6]
+  w1r1c1: [4, 6],
+  w1r1c2: [6, 5],
+  w1r1c3: [6, 3],
+  w1r1c4: [6, 1],
+  w1r2c1: [6, 4],
+  w1r2c2: [6, 4],
+  w1r2c3: [6, 0],
+  w1r2c4: [6, 1],
+  w2r1c1: [5, 6],
+  w2r1c2: [5, 6],
+  w2r1c3: [0, 6],
+  w2r1c4: [2, 6],
+  w2r2c1: [6, 2],
+  w2r2c2: [6, 1],
+  w2r2c3: [6, 2],
+  w2r2c4: [3, 6]
 };
-
 const TOTAL_WEEKS = 7;
 const QUALIFY_SPOTS = 4;
-
-
 /* ============================================================
-   SCORING RULES
-   Win = 3pts. Loss where the losing side scored 4 or 5 games
-   (i.e. lost 6-4 or 6-5) = 1pt. Any other loss = 0pts.
+   SCORING
    ============================================================ */
-
 function pointsForResult(scoreA, scoreB) {
   if (scoreA === scoreB) {
-    return { aPts: 0, bPts: 0 };
+    return {
+      aPts: 0,
+      bPts: 0
+    };
   }
   const aWins = scoreA > scoreB;
   const loserScore = aWins ? scoreB : scoreA;
-  const loserPts = (loserScore === 4 || loserScore === 5) ? 1 : 0;
+  const loserPts =
+    (loserScore === 4 || loserScore === 5) ? 1 : 0;
   return aWins
     ? { aPts: 3, bPts: loserPts }
     : { aPts: loserPts, bPts: 3 };
 }
-
-
 /* ============================================================
    APP STATE
    ============================================================ */
-
-let results = {};   // { fixtureId: [scoreA, scoreB] }
+let results = {};
 let passcode = null;
-
 let currentTab = "table";
 let expandedTeam = null;
 let unlocked = false;
 let manageWeek = 1;
-let scoreInputs = {}; // local edits before saving, keyed by fixtureId -> [scoreA, scoreB]
-
-
+let scoreInputs = {};
 /* ============================================================
    STANDINGS
    ============================================================ */
-
 function computeStandings() {
-
   const stats = {};
-
   TEAMS.forEach(function(team) {
     stats[team.id] = {
       id: team.id,
       name: team.name,
-      played: 0, wins: 0, losses: 0,
-      gf: 0, ga: 0, points: 0,
-      headToHead: {} // opponentId -> { gf, ga }
+      played: 0,
+      wins: 0,
+      losses: 0,
+      gf: 0,
+      ga: 0,
+      points: 0,
+      headToHead: {}
     };
   });
-
   SCHEDULE.forEach(function(fixture) {
-
     const result = results[fixture.id];
     if (!result) return;
-
     const [scoreA, scoreB] = result;
-    const { aPts, bPts } = pointsForResult(scoreA, scoreB);
-
+    const {
+      aPts,
+      bPts
+    } = pointsForResult(scoreA, scoreB);
     const a = stats[fixture.teamA];
     const b = stats[fixture.teamB];
     if (!a || !b) return;
-
-    a.played++; b.played++;
-    a.gf += scoreA; a.ga += scoreB;
-    b.gf += scoreB; b.ga += scoreA;
-    a.points += aPts; b.points += bPts;
-
-    if (scoreA > scoreB) { a.wins++; b.losses++; }
-    else if (scoreB > scoreA) { b.wins++; a.losses++; }
-
-    if (!a.headToHead[fixture.teamB]) a.headToHead[fixture.teamB] = { gf: 0, ga: 0 };
+    a.played++;
+    b.played++;
+    a.gf += scoreA;
+    a.ga += scoreB;
+    b.gf += scoreB;
+    b.ga += scoreA;
+    a.points += aPts;
+    b.points += bPts;
+    if (scoreA > scoreB) {
+      a.wins++;
+      b.losses++;
+    } else if (scoreB > scoreA) {
+      b.wins++;
+      a.losses++;
+    }
+    if (!a.headToHead[fixture.teamB]) {
+      a.headToHead[fixture.teamB] = {
+        gf: 0,
+        ga: 0
+      };
+    }
     a.headToHead[fixture.teamB].gf += scoreA;
     a.headToHead[fixture.teamB].ga += scoreB;
-
-    if (!b.headToHead[fixture.teamA]) b.headToHead[fixture.teamA] = { gf: 0, ga: 0 };
+    if (!b.headToHead[fixture.teamA]) {
+      b.headToHead[fixture.teamA] = {
+        gf: 0,
+        ga: 0
+      };
+    }
     b.headToHead[fixture.teamA].gf += scoreB;
     b.headToHead[fixture.teamA].ga += scoreA;
-
   });
-
   return Object.values(stats).map(function(team) {
-    return { ...team, gd: team.gf - team.ga };
+    return {
+      ...team,
+      gd: team.gf - team.ga
+    };
   });
-
 }
-
 function compareTeams(a, b) {
-  if (a.points !== b.points) return b.points - a.points;
-
+  if (a.points !== b.points) {
+    return b.points - a.points;
+  }
   const h2h = a.headToHead[b.id];
   if (h2h) {
     const diff = h2h.gf - h2h.ga;
-    if (diff !== 0) return -diff;
+    if (diff !== 0) {
+      return -diff;
+    }
   }
-
-  if (a.gf !== b.gf) return b.gf - a.gf;
-  if (a.ga !== b.ga) return a.ga - b.ga;
-  if (a.gd !== b.gd) return b.gd - a.gd;
+  if (a.gf !== b.gf) {
+    return b.gf - a.gf;
+  }
+  if (a.ga !== b.ga) {
+    return a.ga - b.ga;
+  }
+  if (a.gd !== b.gd) {
+    return b.gd - a.gd;
+  }
   return a.name.localeCompare(b.name);
 }
-
 function getSortedStandings() {
   return computeStandings().sort(compareTeams);
 }
-
-
 /* ============================================================
    RENDER
    ============================================================ */
-
 function render() {
-
   const app = document.getElementById("app");
   const standings = getSortedStandings();
-
   let html = "";
   html += renderHeader(standings);
   html += '<main class="main">';
-
-  if (currentTab === "table") html += renderTable(standings);
-  if (currentTab === "fixtures") html += renderFixtures();
-  if (currentTab === "manage") {
-    html += unlocked ? renderManage() : renderPasscodeGate();
+  if (currentTab === "table") {
+    html += renderTable(standings);
   }
-
+  if (currentTab === "fixtures") {
+    html += renderFixtures();
+  }
+  if (currentTab === "manage") {
+    html += unlocked
+      ? renderManage()
+      : renderPasscodeGate();
+  }
   html += "</main>";
   html += renderTabBar();
-
   app.innerHTML = html;
   attachEvents();
-
 }
-
-
 /* ============================================================
    HEADER
    ============================================================ */
-
 function renderHeader(standings) {
-
-  const playedFixtures = SCHEDULE.filter(f => results[f.id]).length;
-
+  const playedFixtures =
+    SCHEDULE.filter(f => results[f.id]).length;
   return `
     <header class="header">
-      <div class="header-kicker">Season 1</div>
-      <h1>Thursday Night<br>Padel Club</h1>
+      <div class="header-kicker">
+        Season 1
+      </div>
+      <h1>
+        Thursday Night<br>
+        Padel Club
+      </h1>
       <div class="header-meta">
-        <span>${TEAMS.length} teams</span>
+        <span>
+          ${TEAMS.length} teams
+        </span>
         <span>·</span>
-        <span>${playedFixtures} / ${SCHEDULE.length} games played</span>
+        <span>
+          ${playedFixtures} / ${SCHEDULE.length} games played
+        </span>
       </div>
     </header>
   `;
-
 }
-
-
 /* ============================================================
    LEAGUE TABLE
    ============================================================ */
-
 function renderTable(standings) {
-
   let html = "";
-
   html += `
     <div class="table-header">
       <span>Team</span>
@@ -1032,30 +973,56 @@ function renderTable(standings) {
       </div>
     </div>
   `;
-
   standings.forEach(function(team, index) {
-
     const rank = index + 1;
-    const isOpen = expandedTeam === team.id;
-    const qualifying = rank <= QUALIFY_SPOTS;
-
+    const isOpen =
+      expandedTeam === team.id;
+    const qualifying =
+      rank <= QUALIFY_SPOTS;
     let rankBg = "#1E2E48";
     let rankColor = "#7C93B5";
-    if (rank === 1) { rankBg = "#E8B94A"; rankColor = "#0B1420"; }
-    if (rank === 2) { rankBg = "#C9C9C9"; rankColor = "#0B1420"; }
-    if (rank === 3) { rankBg = "#B08655"; rankColor = "#0B1420"; }
-
+    if (rank === 1) {
+      rankBg = "#E8B94A";
+      rankColor = "#0B1420";
+    }
+    if (rank === 2) {
+      rankBg = "#C9C9C9";
+      rankColor = "#0B1420";
+    }
+    if (rank === 3) {
+      rankBg = "#B08655";
+      rankColor = "#0B1420";
+    }
     html += `
       <div class="card team-row ${qualifying ? "qualifying" : ""}">
-        <button class="team-main" data-action="expand" data-id="${team.id}">
-          <div class="rank" style="background:${rankBg};color:${rankColor}">${rank}</div>
-          <div class="team-info">
-            <div class="team-name">${escapeHTML(team.name)}</div>
-            <div class="team-record">P${team.played} · W${team.wins} L${team.losses}</div>
+        <button
+          class="team-main"
+          data-action="expand"
+          data-id="${team.id}"
+        >
+          <div
+            class="rank"
+            style="background:${rankBg};color:${rankColor}"
+          >
+            ${rank}
           </div>
-          <div class="points">${team.points}</div>
-          <div class="gd-value">${formatGD(team.gd)}</div>
-          <div class="chevron ${isOpen ? "open" : ""}">▾</div>
+          <div class="team-info">
+            <div class="team-name">
+              ${escapeHTML(team.name)}
+            </div>
+            <div class="team-record">
+              P${team.played} · W${team.wins} L${team.losses}
+            </div>
+          </div>
+          <div class="points">
+            ${team.points}
+          </div>
+          <div class="gd-value">
+            ${formatGD(team.gd)}
+          </div>
+          <div class="chevron ${isOpen ? "open" : ""}">
+            ▾
+          </div>
         </button>
         ${isOpen ? `
           <div class="team-stats">
@@ -1069,201 +1036,461 @@ function renderTable(standings) {
         ` : ""}
       </div>
     `;
-
   });
-
   html += `
     <div class="legend-row">
       <span class="legend-dot"></span>
-      <span>Top ${QUALIFY_SPOTS} qualify for the semi-finals</span>
+      <span>
+        Top ${QUALIFY_SPOTS} qualify for the semi-finals
+      </span>
     </div>
     <div class="table-note">
       Win = 3pts · 6-4 or 6-5 loss = 1pt · other loss = 0pts<br>
-      Tiebreakers: points → head-to-head → games for → games against → game difference
+      Tiebreakers:
+      points → head-to-head → games for →
+      games against → game difference
     </div>
   `;
-
   return html;
-
 }
-
 function statCell(label, value) {
   return `
     <div class="stat-cell">
-      <div class="stat-label">${label}</div>
-      <div class="stat-value">${value}</div>
+      <div class="stat-label">
+        ${label}
+      </div>
+      <div class="stat-value">
+        ${value}
+      </div>
     </div>
   `;
 }
-
-
 /* ============================================================
-   FIXTURES & RESULTS (read only)
+   FIXTURES
    ============================================================ */
-
 function renderFixtures() {
-
   let html = "";
-
-  for (let week = 1; week <= TOTAL_WEEKS; week++) {
-
+  for (
+    let week = 1;
+    week <= TOTAL_WEEKS;
+    week++
+  ) {
     html += `
       <div class="week-heading">
-        <span class="week-title">Week ${week}</span>
-        <span class="week-pill">2 rounds · 4 courts</span>
+        <span class="week-title">
+          Week ${week}
+        </span>
+        <span class="week-pill">
+          2 rounds · 4 courts
+        </span>
       </div>
     `;
-
     [1, 2].forEach(function(round) {
-
-      const roundFixtures = SCHEDULE.filter(f => f.week === week && f.round === round);
+      const roundFixtures =
+        SCHEDULE.filter(
+          f =>
+            f.week === week &&
+            f.round === round
+        );
       if (!roundFixtures.length) return;
-
-      html += `<div class="round-label">Round ${round} · ${roundFixtures[0].time}</div>`;
-
+      html += `
+        <div class="round-label">
+          Round ${round} ·
+          ${escapeHTML(roundFixtures[0].time)}
+        </div>
+      `;
       roundFixtures.forEach(function(fixture) {
-
-        const result = results[fixture.id];
-        const aName = teamName(fixture.teamA);
-        const bName = teamName(fixture.teamB);
-
-        let scoreHTML = '<span class="fixture-score pending">–</span>';
-        let aClass = "fixture-team";
-        let bClass = "fixture-team right";
-
+        const result =
+          results[fixture.id];
+        const aName =
+          teamName(fixture.teamA);
+        const bName =
+          teamName(fixture.teamB);
+        let scoreHTML =
+          '<span class="fixture-score pending">–</span>';
+        let aClass =
+          "fixture-team";
+        let bClass =
+          "fixture-team right";
         if (result) {
-          const [scoreA, scoreB] = result;
-          scoreHTML = `<span class="fixture-score">${scoreA}–${scoreB}</span>`;
-          if (scoreA > scoreB) aClass += " winner";
-          if (scoreB > scoreA) bClass += " winner";
+          const [scoreA, scoreB] =
+            result;
+          scoreHTML = `
+            <span class="fixture-score">
+              ${scoreA}–${scoreB}
+            </span>
+          `;
+          if (scoreA > scoreB) {
+            aClass += " winner";
+          }
+          if (scoreB > scoreA) {
+            bClass += " winner";
+          }
         }
-
         html += `
           <div class="card fixture-row">
-            <span class="fixture-court">C${fixture.court}</span>
-            <span class="${aClass}">${escapeHTML(aName)}</span>
+            <span class="fixture-court">
+              C${fixture.court}
+            </span>
+            <span class="${aClass}">
+              ${escapeHTML(aName)}
+            </span>
             ${scoreHTML}
-            <span class="${bClass}">${escapeHTML(bName)}</span>
+            <span class="${bClass}">
+              ${escapeHTML(bName)}
+            </span>
           </div>
         `;
-
       });
-
     });
-
   }
-
   return html;
-
 }
-
-
 /* ============================================================
-   PASSCODE GATE
+   PASSCODE
    ============================================================ */
-
 function renderPasscodeGate() {
-
   const setup = !passcode;
-
   return `
     <div class="gate">
-      <div class="gate-icon">${setup ? "🔑" : "🔒"}</div>
-      <h2>${setup ? "Set a manager passcode" : "Manager access"}</h2>
-      <p>${setup
-        ? "Anyone with this passcode can enter and edit match results."
-        : "Enter the passcode to enter or edit results."}</p>
+      <div class="gate-icon">
+        ${setup ? "🔑" : "🔒"}
+      </div>
+      <h2>
+        ${setup
+          ? "Set a manager passcode"
+          : "Manager access"}
+      </h2>
+      <p>
+        ${setup
+          ? "Anyone with this passcode can enter and edit match results and fixtures."
+          : "Enter the passcode to enter or edit results and fixtures."}
+      </p>
       <div class="gate-form">
-        <input id="passcode-input" type="password" class="input" placeholder="Passcode">
-        ${setup ? `<input id="passcode-confirm" type="password" class="input" placeholder="Confirm passcode">` : ""}
-        <div id="passcode-error" style="color:#F19AA6;font-size:12px;margin-bottom:8px"></div>
-        <button class="primary-button" data-action="unlock">
-          ${setup ? "Set passcode & unlock" : "Unlock"}
+        <input
+          id="passcode-input"
+          type="password"
+          class="input"
+          placeholder="Passcode"
+        >
+        ${setup
+          ? `
+            <input
+              id="passcode-confirm"
+              type="password"
+              class="input"
+              placeholder="Confirm passcode"
+            >
+          `
+          : ""}
+        <div
+          id="passcode-error"
+          style="color:#F19AA6;font-size:12px;margin-bottom:8px"
+        ></div>
+        <button
+          class="primary-button"
+          data-action="unlock"
+        >
+          ${setup
+            ? "Set passcode & unlock"
+            : "Unlock"}
         </button>
       </div>
     </div>
   `;
-
 }
-
-
 /* ============================================================
-   MANAGE — ENTER / EDIT RESULTS
+   MANAGE
    ============================================================ */
-
 function renderManage() {
-
   let html = `
-    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px">
+    <div
+      style="display:flex;align-items:center;gap:8px;margin-bottom:12px"
+    >
       <div style="flex:1">
-        <div class="filter-label">Week</div>
-        <select id="manage-week" class="filter-select">
+        <div class="filter-label">
+          Week
+        </div>
+        <select
+          id="manage-week"
+          class="filter-select"
+        >
           ${weekOptions()}
         </select>
       </div>
-      <button class="lock-button" data-action="lock">🔒</button>
+      <button
+        class="lock-button"
+        data-action="lock"
+      >
+        🔒
+      </button>
+    </div>
+    <div class="card card-padding" style="margin-bottom:12px">
+      <div
+        class="manage-section-title"
+        style="margin-top:0"
+      >
+        Amend fixtures
+      </div>
+      <div class="manage-help">
+        Change the teams, court or time below.
+        Changes are saved to Firebase and will appear
+        on the Fixtures tab for everyone.
+      </div>
     </div>
   `;
-
   [1, 2].forEach(function(round) {
-
-    const roundFixtures = SCHEDULE.filter(f => f.week === manageWeek && f.round === round);
+    const roundFixtures =
+      SCHEDULE.filter(
+        f =>
+          f.week === manageWeek &&
+          f.round === round
+      );
     if (!roundFixtures.length) return;
-
-    html += `<div class="round-label">Round ${round} · ${roundFixtures[0].time}</div>`;
-
+    html += `
+      <div class="round-label">
+        Round ${round}
+      </div>
+    `;
     roundFixtures.forEach(function(fixture) {
-
-      const existing = results[fixture.id];
-      const edited = scoreInputs[fixture.id];
-      const scoreA = edited ? edited[0] : (existing ? existing[0] : "");
-      const scoreB = edited ? edited[1] : (existing ? existing[1] : "");
-
       html += `
         <div class="card manage-fixture">
           <div class="manage-fixture-top">
-            <span>Court ${fixture.court}</span>
+            <span>
+              Fixture ${escapeHTML(fixture.id)}
+            </span>
           </div>
-          <div class="manage-score-row">
-            <span class="manage-team-name">${escapeHTML(teamName(fixture.teamA))}</span>
-            <input class="manage-score-input" type="number" min="0" inputmode="numeric"
-              data-action="score-input" data-fixture="${fixture.id}" data-side="a" value="${scoreA}">
-            <span class="manage-vs">–</span>
-            <input class="manage-score-input" type="number" min="0" inputmode="numeric"
-              data-action="score-input" data-fixture="${fixture.id}" data-side="b" value="${scoreB}">
-            <span class="manage-team-name" style="text-align:right">${escapeHTML(teamName(fixture.teamB))}</span>
+          <div class="manage-fixture-editor">
+            <div class="field">
+              <div class="field-label">
+                Court
+              </div>
+              <input
+                class="input"
+                type="number"
+                min="1"
+                max="99"
+                value="${escapeHTML(fixture.court)}"
+                data-action="fixture-field"
+                data-fixture="${fixture.id}"
+                data-field="court"
+              >
+            </div>
+            <div class="field">
+              <div class="field-label">
+                Time
+              </div>
+              <input
+                class="input"
+                type="text"
+                value="${escapeHTML(fixture.time)}"
+                placeholder="7:30 PM"
+                data-action="fixture-field"
+                data-fixture="${fixture.id}"
+                data-field="time"
+              >
+            </div>
+            <div class="field">
+              <div class="field-label">
+                Team A
+              </div>
+              <select
+                class="select"
+                data-action="fixture-field"
+                data-fixture="${fixture.id}"
+                data-field="teamA"
+              >
+                ${teamOptions(fixture.teamA)}
+              </select>
+            </div>
+            <div class="field">
+              <div class="field-label">
+                Team B
+              </div>
+              <select
+                class="select"
+                data-action="fixture-field"
+                data-fixture="${fixture.id}"
+                data-field="teamB"
+              >
+                ${teamOptions(fixture.teamB)}
+              </select>
+            </div>
+          </div>
+          <div class="fixture-edit-actions">
+            <button
+              class="secondary-button"
+              data-action="reset-fixture"
+              data-fixture="${fixture.id}"
+            >
+              Reset
+            </button>
+            <button
+              class="danger-button"
+              data-action="clear-fixture-result"
+              data-fixture="${fixture.id}"
+            >
+              Clear result
+            </button>
           </div>
         </div>
       `;
-
     });
-
   });
-
   html += `
-    <div id="manage-error" style="color:#F19AA6;font-size:12px;margin-top:4px"></div>
-    <button class="primary-button" data-action="save-week" style="margin-top:12px">
+    <div
+      id="manage-error"
+      style="color:#F19AA6;font-size:12px;margin-top:4px"
+    ></div>
+    <button
+      class="primary-button"
+      data-action="save-fixtures"
+      style="margin-top:12px"
+    >
+      Save Week ${manageWeek} fixtures
+    </button>
+    <button
+      class="secondary-button"
+      data-action="reset-week-fixtures"
+      style="width:100%;margin-top:8px"
+    >
+      Reset Week ${manageWeek} to original fixtures
+    </button>
+    <button
+      class="secondary-button"
+      data-action="reset-all-fixtures"
+      style="width:100%;margin-top:8px"
+    >
+      Reset ALL fixtures
+    </button>
+    <div
+      class="manage-section-title"
+      style="margin-top:28px"
+    >
+      Enter results
+    </div>
+  `;
+  // Existing score-entry interface
+  [1, 2].forEach(function(round) {
+    const roundFixtures =
+      SCHEDULE.filter(
+        f =>
+          f.week === manageWeek &&
+          f.round === round
+      );
+    if (!roundFixtures.length) return;
+    html += `
+      <div class="round-label">
+        Round ${round} · ${escapeHTML(roundFixtures[0].time)}
+      </div>
+    `;
+    roundFixtures.forEach(function(fixture) {
+      const existing =
+        results[fixture.id];
+      const edited =
+        scoreInputs[fixture.id];
+      const scoreA =
+        edited
+          ? edited[0]
+          : (existing ? existing[0] : "");
+      const scoreB =
+        edited
+          ? edited[1]
+          : (existing ? existing[1] : "");
+      html += `
+        <div class="card manage-fixture">
+          <div class="manage-fixture-top">
+            <span>
+              Court ${fixture.court}
+            </span>
+          </div>
+          <div class="manage-score-row">
+            <span class="manage-team-name">
+              ${escapeHTML(teamName(fixture.teamA))}
+            </span>
+            <input
+              class="manage-score-input"
+              type="number"
+              min="0"
+              inputmode="numeric"
+              data-action="score-input"
+              data-fixture="${fixture.id}"
+              data-side="a"
+              value="${scoreA}"
+            >
+            <span class="manage-vs">
+              –
+            </span>
+            <input
+              class="manage-score-input"
+              type="number"
+              min="0"
+              inputmode="numeric"
+              data-action="score-input"
+              data-fixture="${fixture.id}"
+              data-side="b"
+              value="${scoreB}"
+            >
+            <span
+              class="manage-team-name"
+              style="text-align:right"
+            >
+              ${escapeHTML(teamName(fixture.teamB))}
+            </span>
+          </div>
+        </div>
+      `;
+    });
+  });
+  html += `
+    <button
+      class="primary-button"
+      data-action="save-week"
+      style="margin-top:12px"
+    >
       Save Week ${manageWeek} results
     </button>
   `;
-
   return html;
-
 }
-
+/* ============================================================
+   OPTIONS
+   ============================================================ */
 function weekOptions() {
   let options = "";
-  for (let week = 1; week <= TOTAL_WEEKS; week++) {
-    options += `<option value="${week}" ${manageWeek === week ? "selected" : ""}>Week ${week}</option>`;
+  for (
+    let week = 1;
+    week <= TOTAL_WEEKS;
+    week++
+  ) {
+    options += `
+      <option
+        value="${week}"
+        ${manageWeek === week ? "selected" : ""}
+      >
+        Week ${week}
+      </option>
+    `;
   }
   return options;
 }
-
-
+function teamOptions(selectedId) {
+  let options = "";
+  TEAMS.forEach(function(team) {
+    options += `
+      <option
+        value="${team.id}"
+        ${team.id === selectedId ? "selected" : ""}
+      >
+        ${escapeHTML(team.name)}
+      </option>
+    `;
+  });
+  return options;
+}
 /* ============================================================
    TAB BAR
    ============================================================ */
-
 function renderTabBar() {
   return `
     <nav class="tab-bar">
@@ -1275,232 +1502,643 @@ function renderTabBar() {
     </nav>
   `;
 }
-
 function tabButton(id, icon, label) {
   return `
-    <button class="tab-button ${currentTab === id ? "active" : ""}" data-action="tab" data-tab="${id}">
-      <span class="tab-icon">${icon}</span>
+    <button
+      class="tab-button ${currentTab === id ? "active" : ""}"
+      data-action="tab"
+      data-tab="${id}"
+    >
+      <span class="tab-icon">
+        ${icon}
+      </span>
       ${label}
     </button>
   `;
 }
-
-
 /* ============================================================
    EVENTS
    ============================================================ */
-
 function attachEvents() {
-
-  document.querySelectorAll('[data-action="tab"]').forEach(function(button) {
-    button.addEventListener("click", function() {
-      currentTab = button.dataset.tab;
-      render();
+  /* TABS */
+  document
+    .querySelectorAll('[data-action="tab"]')
+    .forEach(function(button) {
+      button.addEventListener("click", function() {
+        currentTab =
+          button.dataset.tab;
+        render();
+      });
     });
-  });
-
-  document.querySelectorAll('[data-action="expand"]').forEach(function(button) {
-    button.addEventListener("click", function() {
-      expandedTeam = expandedTeam === button.dataset.id ? null : button.dataset.id;
-      render();
+  /* TABLE EXPANSION */
+  document
+    .querySelectorAll('[data-action="expand"]')
+    .forEach(function(button) {
+      button.addEventListener("click", function() {
+        expandedTeam =
+          expandedTeam === button.dataset.id
+            ? null
+            : button.dataset.id;
+        render();
+      });
     });
-  });
-
-  const unlock = document.querySelector('[data-action="unlock"]');
-  if (unlock) unlock.addEventListener("click", handleUnlock);
-
-  const lock = document.querySelector('[data-action="lock"]');
+  /* UNLOCK */
+  const unlock =
+    document.querySelector('[data-action="unlock"]');
+  if (unlock) {
+    unlock.addEventListener(
+      "click",
+      handleUnlock
+    );
+  }
+  /* LOCK */
+  const lock =
+    document.querySelector('[data-action="lock"]');
   if (lock) {
     lock.addEventListener("click", function() {
       unlocked = false;
       render();
     });
   }
-
-  const manageWeekSelect = document.getElementById("manage-week");
+  /* MANAGE WEEK */
+  const manageWeekSelect =
+    document.getElementById("manage-week");
   if (manageWeekSelect) {
-    manageWeekSelect.addEventListener("change", function() {
-      manageWeek = Number(manageWeekSelect.value);
-      scoreInputs = {};
-      render();
-    });
-  }
-
-  document.querySelectorAll('[data-action="score-input"]').forEach(function(input) {
-    input.addEventListener("input", function() {
-      const fixtureId = input.dataset.fixture;
-      const side = input.dataset.side;
-      if (!scoreInputs[fixtureId]) {
-        const existing = results[fixtureId] || ["", ""];
-        scoreInputs[fixtureId] = [existing[0], existing[1]];
+    manageWeekSelect.addEventListener(
+      "change",
+      function() {
+        manageWeek =
+          Number(manageWeekSelect.value);
+        scoreInputs = {};
+        render();
       }
-      scoreInputs[fixtureId][side === "a" ? 0 : 1] = input.value;
+    );
+  }
+  /* SCORE INPUTS */
+  document
+    .querySelectorAll('[data-action="score-input"]')
+    .forEach(function(input) {
+      input.addEventListener("input", function() {
+        const fixtureId =
+          input.dataset.fixture;
+        const side =
+          input.dataset.side;
+        if (!scoreInputs[fixtureId]) {
+          const existing =
+            results[fixtureId] || ["", ""];
+          scoreInputs[fixtureId] = [
+            existing[0],
+            existing[1]
+          ];
+        }
+        scoreInputs[fixtureId][
+          side === "a" ? 0 : 1
+        ] = input.value;
+      });
     });
-  });
-
-  const saveWeek = document.querySelector('[data-action="save-week"]');
-  if (saveWeek) saveWeek.addEventListener("click", saveWeekResults);
-
+  /* FIXTURE FIELDS */
+  document
+    .querySelectorAll('[data-action="fixture-field"]')
+    .forEach(function(input) {
+      input.addEventListener("change", function() {
+        const fixtureId =
+          input.dataset.fixture;
+        const field =
+          input.dataset.field;
+        const fixture =
+          SCHEDULE.find(
+            f => f.id === fixtureId
+          );
+        if (!fixture) return;
+        if (field === "court") {
+          fixture.court =
+            Number(input.value);
+        } else {
+          fixture[field] =
+            input.value;
+        }
+      });
+    });
+  /* SAVE FIXTURES */
+  const saveFixtures =
+    document.querySelector(
+      '[data-action="save-fixtures"]'
+    );
+  if (saveFixtures) {
+    saveFixtures.addEventListener(
+      "click",
+      saveWeekFixtures
+    );
+  }
+  /* RESET INDIVIDUAL FIXTURE */
+  document
+    .querySelectorAll('[data-action="reset-fixture"]')
+    .forEach(function(button) {
+      button.addEventListener(
+        "click",
+        function() {
+          const fixtureId =
+            button.dataset.fixture;
+          const original =
+            DEFAULT_SCHEDULE.find(
+              f => f.id === fixtureId
+            );
+          const fixture =
+            SCHEDULE.find(
+              f => f.id === fixtureId
+            );
+          if (!original || !fixture) {
+            return;
+          }
+          Object.assign(
+            fixture,
+            original
+          );
+          render();
+        }
+      );
+    });
+  /* CLEAR RESULT */
+  document
+    .querySelectorAll('[data-action="clear-fixture-result"]')
+    .forEach(function(button) {
+      button.addEventListener(
+        "click",
+        function() {
+          const fixtureId =
+            button.dataset.fixture;
+          if (
+            !confirm(
+              "Clear the result for this fixture?"
+            )
+          ) {
+            return;
+          }
+          delete results[fixtureId];
+          delete scoreInputs[fixtureId];
+          saveResultsOnly();
+        }
+      );
+    });
+  /* RESET WEEK */
+  const resetWeekFixtures =
+    document.querySelector(
+      '[data-action="reset-week-fixtures"]'
+    );
+  if (resetWeekFixtures) {
+    resetWeekFixtures.addEventListener(
+      "click",
+      function() {
+        if (
+          !confirm(
+            "Reset Week " +
+            manageWeek +
+            " back to the original fixtures?"
+          )
+        ) {
+          return;
+        }
+        SCHEDULE =
+          SCHEDULE.map(function(fixture) {
+            if (
+              fixture.week !== manageWeek
+            ) {
+              return fixture;
+            }
+            const original =
+              DEFAULT_SCHEDULE.find(
+                f => f.id === fixture.id
+              );
+            return original
+              ? { ...original }
+              : fixture;
+          });
+        render();
+      }
+    );
+  }
+  /* RESET ALL */
+  const resetAllFixtures =
+    document.querySelector(
+      '[data-action="reset-all-fixtures"]'
+    );
+  if (resetAllFixtures) {
+    resetAllFixtures.addEventListener(
+      "click",
+      function() {
+        if (
+          !confirm(
+            "Reset ALL fixtures back to the original schedule?"
+          )
+        ) {
+          return;
+        }
+        SCHEDULE =
+          DEFAULT_SCHEDULE.map(
+            f => ({ ...f })
+          );
+        render();
+      }
+    );
+  }
+  /* SAVE RESULTS */
+  const saveWeek =
+    document.querySelector(
+      '[data-action="save-week"]'
+    );
+  if (saveWeek) {
+    saveWeek.addEventListener(
+      "click",
+      saveWeekResults
+    );
+  }
 }
-
-
 /* ============================================================
    PASSCODE HANDLING
    ============================================================ */
-
 async function handleUnlock() {
-
-  const input = document.getElementById("passcode-input");
-  const error = document.getElementById("passcode-error");
-  const value = input ? input.value : "";
-
+  const input =
+    document.getElementById(
+      "passcode-input"
+    );
+  const error =
+    document.getElementById(
+      "passcode-error"
+    );
+  const value =
+    input
+      ? input.value
+      : "";
+  /* FIRST-TIME SETUP */
   if (!passcode) {
-
-    const confirmInput = document.getElementById("passcode-confirm");
-
-    if (!value || value.length < 4) {
-      error.textContent = "Use at least 4 characters.";
+    const confirmInput =
+      document.getElementById(
+        "passcode-confirm"
+      );
+    if (
+      !value ||
+      value.length < 4
+    ) {
+      error.textContent =
+        "Use at least 4 characters.";
       return;
     }
-
-    if (!confirmInput || value !== confirmInput.value) {
-      error.textContent = "Passcodes don't match.";
+    if (
+      !confirmInput ||
+      value !== confirmInput.value
+    ) {
+      error.textContent =
+        "Passcodes don't match.";
       return;
     }
-
     try {
-      await firebaseSet("passcode", value);
+      await firebaseSet(
+        "passcode",
+        value
+      );
       passcode = value;
       unlocked = true;
       render();
     } catch (e) {
-      error.textContent = "Couldn't save passcode: " + e.message;
+      error.textContent =
+        "Couldn't save passcode: " +
+        e.message;
     }
-
     return;
-
   }
-
+  /* EXISTING PASSCODE */
   if (value === passcode) {
     unlocked = true;
     render();
   } else {
-    error.textContent = "Wrong passcode.";
+    error.textContent =
+      "Wrong passcode.";
   }
-
 }
-
-
+/* ============================================================
+   SAVE FIXTURES
+   ============================================================ */
+async function saveWeekFixtures() {
+  const error =
+    document.getElementById(
+      "manage-error"
+    );
+  const weekFixtures =
+    SCHEDULE.filter(
+      f => f.week === manageWeek
+    );
+  /* VALIDATION */
+  for (
+    const fixture of weekFixtures
+  ) {
+    if (
+      !fixture.teamA ||
+      !fixture.teamB
+    ) {
+      error.textContent =
+        "Every fixture must have two teams.";
+      return;
+    }
+    if (
+      fixture.teamA ===
+      fixture.teamB
+    ) {
+      error.textContent =
+        "A team cannot play itself.";
+      return;
+    }
+    if (
+      !fixture.court ||
+      fixture.court < 1
+    ) {
+      error.textContent =
+        "Every fixture needs a valid court.";
+      return;
+    }
+    if (
+      !fixture.time ||
+      !fixture.time.trim()
+    ) {
+      error.textContent =
+        "Every fixture needs a time.";
+      return;
+    }
+  }
+  try {
+    await firebaseSet(
+      "fixtures",
+      SCHEDULE
+    );
+    alert(
+      "Week " +
+      manageWeek +
+      " fixtures saved!"
+    );
+    render();
+  } catch (e) {
+    console.error(
+      "Fixture save error:",
+      e
+    );
+    error.textContent =
+      "Couldn't save fixtures: " +
+      e.message;
+  }
+}
+/* ============================================================
+   SAVE RESULTS ONLY
+   ============================================================ */
+async function saveResultsOnly() {
+  try {
+    await firebaseSet(
+      "results",
+      results
+    );
+    render();
+  } catch (e) {
+    console.error(
+      "Result save error:",
+      e
+    );
+    alert(
+      "Couldn't save result changes: " +
+      e.message
+    );
+  }
+}
 /* ============================================================
    SAVE RESULTS
    ============================================================ */
-
 async function saveWeekResults() {
-
-  const error = document.getElementById("manage-error");
-  const weekFixtures = SCHEDULE.filter(f => f.week === manageWeek);
-
-  const updated = { ...results };
-
-  for (const fixture of weekFixtures) {
-
-    const edited = scoreInputs[fixture.id];
-    const existing = results[fixture.id];
-
-    const scoreA = edited ? edited[0] : (existing ? existing[0] : "");
-    const scoreB = edited ? edited[1] : (existing ? existing[1] : "");
-
-    if (scoreA === "" && scoreB === "") continue;
-
-    if (scoreA === "" || scoreB === "") {
-      error.textContent = "Enter both scores for Court " + fixture.court + ", or leave both blank.";
+  const error =
+    document.getElementById(
+      "manage-error"
+    );
+  const weekFixtures =
+    SCHEDULE.filter(
+      f => f.week === manageWeek
+    );
+  const updated =
+    { ...results };
+  for (
+    const fixture of weekFixtures
+  ) {
+    const edited =
+      scoreInputs[fixture.id];
+    const existing =
+      results[fixture.id];
+    const scoreA =
+      edited
+        ? edited[0]
+        : (existing
+            ? existing[0]
+            : "");
+    const scoreB =
+      edited
+        ? edited[1]
+        : (existing
+            ? existing[1]
+            : "");
+    if (
+      scoreA === "" &&
+      scoreB === ""
+    ) {
+      continue;
+    }
+    if (
+      scoreA === "" ||
+      scoreB === ""
+    ) {
+      error.textContent =
+        "Enter both scores for Court " +
+        fixture.court +
+        ", or leave both blank.";
       return;
     }
-
-    updated[fixture.id] = [Number(scoreA), Number(scoreB)];
-
+    const numberA =
+      Number(scoreA);
+    const numberB =
+      Number(scoreB);
+    if (
+      !Number.isFinite(numberA) ||
+      !Number.isFinite(numberB) ||
+      numberA < 0 ||
+      numberB < 0
+    ) {
+      error.textContent =
+        "Scores must be valid numbers.";
+      return;
+    }
+    if (
+      numberA === numberB
+    ) {
+      error.textContent =
+        "Scores cannot be tied.";
+      return;
+    }
+    updated[fixture.id] = [
+      numberA,
+      numberB
+    ];
   }
-
   try {
-    await firebaseSet("results", updated);
+    await firebaseSet(
+      "results",
+      updated
+    );
     results = updated;
     scoreInputs = {};
-    alert("Week " + manageWeek + " results saved!");
+    alert(
+      "Week " +
+      manageWeek +
+      " results saved!"
+    );
     render();
   } catch (e) {
-    error.textContent = "Couldn't save results: " + e.message;
+    error.textContent =
+      "Couldn't save results: " +
+      e.message;
   }
-
 }
-
-
 /* ============================================================
    START APP
    ============================================================ */
-
 async function startApp() {
-
-  const app = document.getElementById("app");
-
+  const app =
+    document.getElementById(
+      "app"
+    );
   try {
-
-    console.log("Padel: starting application");
-
-    if (!FIREBASE_URL || FIREBASE_URL.includes("PASTE")) {
-      throw new Error("Firebase URL is not configured.");
+    console.log(
+      "Padel: starting application"
+    );
+    if (
+      !FIREBASE_URL ||
+      FIREBASE_URL.includes("PASTE")
+    ) {
+      throw new Error(
+        "Firebase URL is not configured."
+      );
     }
-
-    const [storedResults, storedPasscode] = await Promise.all([
-      firebaseGet("results", null),
-      firebaseGet("passcode", null)
+    const [
+      storedResults,
+      storedPasscode,
+      storedFixtures
+    ] = await Promise.all([
+      firebaseGet(
+        "results",
+        null
+      ),
+      firebaseGet(
+        "passcode",
+        null
+      ),
+      firebaseGet(
+        "fixtures",
+        null
+      )
     ]);
-
-    if (storedResults === null) {
-      // First ever load — seed the known week 1-2 results.
-      results = { ...SEED_RESULTS };
-      await firebaseSet("results", results);
+    /* FIXTURES */
+    if (
+      storedFixtures === null
+    ) {
+      SCHEDULE =
+        DEFAULT_SCHEDULE.map(
+          f => ({ ...f })
+        );
+      await firebaseSet(
+        "fixtures",
+        SCHEDULE
+      );
     } else {
-      results = storedResults;
+      SCHEDULE =
+        storedFixtures;
     }
-
-    passcode = storedPasscode || null;
-
-    console.log("Padel: Firebase loaded", {
-      resultsCount: Object.keys(results).length,
-      hasPasscode: !!passcode
-    });
-
+    /* RESULTS */
+    if (
+      storedResults === null
+    ) {
+      results =
+        { ...SEED_RESULTS };
+      await firebaseSet(
+        "results",
+        results
+      );
+    } else {
+      results =
+        storedResults;
+    }
+    /* PASSCODE */
+    passcode =
+      storedPasscode || null;
+    console.log(
+      "Padel: Firebase loaded",
+      {
+        resultsCount:
+          Object.keys(results).length,
+        fixtureCount:
+          SCHEDULE.length,
+        hasPasscode:
+          !!passcode
+      }
+    );
     render();
-
   } catch (error) {
-
-    console.error("Padel startup error:", error);
-
+    console.error(
+      "Padel startup error:",
+      error
+    );
     app.innerHTML = `
       <div class="setup-screen">
         <div style="max-width:420px">
-          <div style="font-size:32px;margin-bottom:15px">⚠️</div>
-          <h2 style="margin:0 0 10px;color:#E8384F">Dashboard couldn't load</h2>
-          <p style="color:#7C93B5;font-size:13px;line-height:1.6">
-            The dashboard loaded, but it couldn't connect to Firebase.
+          <div
+            style="font-size:32px;margin-bottom:15px"
+          >
+            ⚠️
+          </div>
+          <h2
+            style="margin:0 0 10px;color:#E8384F"
+          >
+            Dashboard couldn't load
+          </h2>
+          <p
+            style="color:#7C93B5;font-size:13px;line-height:1.6"
+          >
+            The dashboard loaded, but it couldn't
+            connect to Firebase.
           </p>
-          <div style="margin-top:15px;padding:12px;background:#16233A;border:1px solid rgba(255,255,255,0.08);border-radius:8px;text-align:left;font-family:monospace;font-size:11px;color:#F19AA6;word-break:break-word">
+          <div
+            style="
+              margin-top:15px;
+              padding:12px;
+              background:#16233A;
+              border:1px solid rgba(255,255,255,0.08);
+              border-radius:8px;
+              text-align:left;
+              font-family:monospace;
+              font-size:11px;
+              color:#F19AA6;
+              word-break:break-word
+            "
+          >
             ${escapeHTML(error.message)}
           </div>
-          <p style="margin-top:15px;color:#7C93B5;font-size:11px">
-            Open Safari's developer console if you need more information.
+          <p
+            style="
+              margin-top:15px;
+              color:#7C93B5;
+              font-size:11px
+            "
+          >
+            Open Safari's developer console if you
+            need more information.
           </p>
         </div>
       </div>
     `;
-
   }
-
 }
-
 startApp();
-
 </script>
-
 </body>
 </html>
